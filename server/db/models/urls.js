@@ -6,7 +6,7 @@ var schema = new mongoose.Schema({
 });
 
 schema.pre('save', function(next) {
-  var appRoot = 'http://localhost:1337/api/zitly/';
+  var appRoot = 'https://rocky-atoll-2379.herokuapp.com/api/zitly/';
   this.zitly = appRoot;
   for (var i=0; i < (250 - appRoot.length); i++){
     if (Math.random()>  0.5){
