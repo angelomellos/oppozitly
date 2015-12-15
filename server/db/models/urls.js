@@ -8,15 +8,7 @@ var schema = new mongoose.Schema({
 schema.pre('save', function(next) {
   var appRoot = 'https://rocky-atoll-2379.herokuapp.com/api/zitly/';
   this.zitly = appRoot;
-  for (var i=0; i < (250 - appRoot.length); i++){
-    if (Math.random()>  0.5){
-      this.zitly += String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-    }else{
-      this.zitly += String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-    }
-  }
-  this.zitly += "___HI_MOM___";
-  for (var i=0; i < (3700 - appRoot.length); i++){
+  for (var i=0; i < (3999 - appRoot.length); i++){
     if (Math.random()>  0.5){
       this.zitly += String.fromCharCode(Math.floor(Math.random() * 26) + 65);
     }else{
