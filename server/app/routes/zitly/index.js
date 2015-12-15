@@ -7,7 +7,6 @@ var Url = mongoose.model('Url');
 
 router.get('/*' ,function (req, res, next) {
   var fullZitly = 'https://rocky-atoll-2379.herokuapp.com/api/zitly' + req.url;
-  console.log('fullzitly===',fullZitly);
   Url.findOne({zitly: fullZitly})
   .then(url => {
     if(url.url.indexOf("http")===-1)
